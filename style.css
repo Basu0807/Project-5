@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: brown;
+    color: white;
+    margin: 3vh 10vw 0;
+}
+header {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hd1{
+    font-size: 2.5rem;
+}
+#hd1_1{
+    font-family: 'Abril Fatface', cursive;
+}
+.hd2{
+    font-size: 1.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Aref Ruqaa Ink', serif;
+}
+.fa-circle-plus{
+    color: #0080ff;
+}
+
+/* Container */
+#container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#default-msg{
+    font-size: 23px;
+    position: absolute;
+    top: 120px;
+    left: 220px;
+    opacity: 0.7;
+}
+.item {
+    background-color: yellow;
+    width: 200px;
+    min-height: 300px;
+    padding-bottom: 50px;
+    margin: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+.item:hover{
+    box-shadow: 1px 1px 10px whitesmoke;
+}
+.c2 {
+    width: 100%;
+    padding: 15px 0 2px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lobster', cursive;
+}
+.tasks{
+    color: black;
+    list-style: none;
+    text-align: center;
+    line-height: 2;
+    font-family: 'Oswald', sans-serif;
+}
+.close{
+    background-color: red;
+    padding: 6px;
+    border-radius: 20px;
+    margin: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 45px;
+    bottom: 10px;
+}
+.addtask{
+    color: #0080ff;
+    font-size: 1.785rem;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    bottom: 13px;
+}
+.btn{
+    color: white;
+    background-color: #0080ff;
+    border: none;
+    padding: 5px;
+    border-radius: 15px;
+    margin: 5px;
+    font-size: 10px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.marked {
+    color: red;
+    text-decoration: line-through;
+}
+.hide {
+    display: none;
+}
+
+
+/* Add item/ Add list popup*/
+.new {
+    width: 320px;
+    height: 150px;
+    background-color: white;
+    border: 1px solid red;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: default;
+    position: absolute;
+    top: calc((100vh - 150px) / 2);
+    left: calc((100vw - 320px) / 2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.new p{
+    color: red;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Alkalami', serif;
+}
+.new input {
+    text-align: center;
+    width: 240px;
+    height: 30px;
+    border: 1px solid red;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px grey;
+}
+.N1 button {
+    color: white;
+    background-color: red;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 8px 10px;
+}
+
+
+/* Item Expanded View */
+.popup{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+}
+.expPop{
+    background-color: black;
+}
+.item_expand_header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0 40px;
+}
+.expBack{
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-family: 'Aref Ruqaa Ink', serif;
+}
+.itemExpTitle{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.expAdd{
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-family: 'Aref Ruqaa Ink', serif;
+}
+.content{
+    display: flex;
+    justify-content: center;
+}
+.item_Detail{
+    background-color: yellow;
+    width: 200px;
+    min-height: 260px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    position: relative;
+}

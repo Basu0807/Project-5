@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App JS</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/4231ff7c30.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alkalami&family=Aref+Ruqaa+Ink&family=Lobster&family=Oswald&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+        <div class="hd1">
+            <span id="hd1_1">Tasks</span>
+            <span>List</span>
+        </div>
+        <div class="hd2" onclick="popup1()">                             
+            <i class="fa-solid fa-circle-plus"></i>
+            <span style="color: white;">Add Item</span>
+        </div>
+    </header>
+    <p id="default-msg">No items in the todo List</p>
+    <div id="container"></div>
+    
+    <script src="./script.js"></script>
+  </body>
+</html>
