@@ -101,6 +101,8 @@ function goBack(){
 
 let expandItem = (card) => {
     let body = document.getElementsByTagName("body")[0]
+    let container = document.getElementById("container");
+    container.style.visibility = "hidden"
     let hold =document.createElement("section")
     hold.innerHTML = body.innerHTML
     body.innerHTML = ``
@@ -124,6 +126,10 @@ let expandItem = (card) => {
             ${card.parentElement.innerHTML}
         </div>
     </div>`
+    
+        
+    
+
   body.append(div)
 };
 
@@ -131,4 +137,6 @@ function expClose(){
     let body = document.getElementsByTagName("body")[0]
     let hold =document.getElementsByTagName("section")[0]
     body.innerHTML = hold.innerHTML
+    let container = document.getElementById("container");
+    container.style.visibility = "visible"
 }
