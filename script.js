@@ -2,6 +2,7 @@ let taskList = [];
 let itemCount = 0;
 let count = 1;
 let isExpandedView = false;
+const originalHTML = document.body.innerHTML;
 
 let listID = "";
 function getListID(tasks) {
@@ -135,12 +136,20 @@ let strike = (listItem) => {
   taskList[listIndex].items[itemIndex].marked =
     !taskList[listIndex].items[itemIndex].marked;
 
-  renderTaskList();
+  if (isExpandedView) {
+    expandItem(listId);
+  } else {
+    renderTaskList();
+  }
 };
 
 let delList = (trash_can) => {
   taskList = taskList.filter((list) => list.id != trash_can.parentElement.id);
-  renderTaskList();
+  if (isExpandedView) {
+    expClose();
+  } else {
+    renderTaskList();
+  }
 };
 
 function goBack() {
@@ -175,7 +184,7 @@ function expandItem(listId) {
           </div>
         </header>
         <div class="content">
-            <div id="itemDetail" class="item_Detail">
+            <div id="${listObj.id}" class="item_Detail">
                 ${renderExpandList(listObj)}
             </div>
         </div>`;
@@ -198,12 +207,8 @@ function renderExpandList(listObj) {
 }
 
 function expClose() {
-    isExpandedView = false;
-    let body = document.getElementsByTagName("body")[0];
-    let hold = document.getElementsByTagName("section")[0];
-    body.innerHTML = hold.innerHTML;
-    let container = document.getElementById("container");
-    container.style.visibility = "visible";
-    hold.remove(); // Remove the expanded view elements
-  }
-  
+  isExpandedView = false;
+  document.body.innerHTML = originalHTML;
+  document.getElementById("default-msg").style.visibility = "hidden";
+  renderTaskList();
+}
